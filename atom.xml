@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://dankin.github.io</id>
+    <title>Dankin&apos;s Blog</title>
+    <updated>2020-07-07T08:14:23.368Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://dankin.github.io"/>
+    <link rel="self" href="https://dankin.github.io/atom.xml"/>
+    <subtitle>时光泡烂了过往</subtitle>
+    <logo>https://dankin.github.io/images/avatar.png</logo>
+    <icon>https://dankin.github.io/favicon.ico</icon>
+    <rights>All rights reserved 2020, Dankin&apos;s Blog</rights>
+    <entry>
+        <title type="html"><![CDATA[Hello]]></title>
+        <id>https://dankin.github.io/post/hello/</id>
+        <link href="https://dankin.github.io/post/hello/">
+        </link>
+        <updated>2020-07-07T07:33:56.000Z</updated>
+        <content type="html"><![CDATA[<p>比起写博客，更想作为一个记录自己的地方吧，有趣的事，想说的话，顺带上一些学习笔记，成就打卡，比起社交软件上的树洞，这样一个大大方方而又无人问津的地方更合我的胃口。<br>
+搭建这个blog用的是<a href="http://www.https://gridea.dev">Gridea</a>，图个方便，暂时偏向简洁风就先不安装什么插件了，用了自带的simple主题，比起花里胡哨，更重要的是写下的文字吧。</p>
+]]></content>
+    </entry>
+</feed>
