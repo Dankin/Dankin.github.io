@@ -1,22 +1,102 @@
-<?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://dankin.github.io</id>
-    <title>Dankin&apos;s Blog</title>
-    <updated>2020-07-08T08:18:38.688Z</updated>
-    <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://dankin.github.io"/>
-    <link rel="self" href="https://dankin.github.io/atom.xml"/>
-    <subtitle>时光泡烂了过往</subtitle>
-    <logo>https://dankin.github.io/images/avatar.png</logo>
-    <icon>https://dankin.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2020, Dankin&apos;s Blog</rights>
-    <entry>
-        <title type="html"><![CDATA[CNN卷积神经网络]]></title>
-        <id>https://dankin.github.io/post/cnn-juan-ji-ceng-xiu-gai/</id>
-        <link href="https://dankin.github.io/post/cnn-juan-ji-ceng-xiu-gai/">
-        </link>
-        <updated>2020-07-07T23:30:33.000Z</updated>
-        <content type="html"><![CDATA[<p>帮学长做一个卷积层的修改，历时一个月，折腾好多方案，最后完成了项目，虽然最后的成果没有尽如人意，但还是学到了不少东西，写篇文章记录一下。</p>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>CNN卷积神经网络 | Dankin&#39;s Blog</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://dankin.github.io/favicon.ico?v=1594196307442">
+<link rel="stylesheet" href="https://dankin.github.io/styles/main.css">
+
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+
+    <meta name="description" content="帮学长做一个卷积层的修改，历时一个月，折腾好多方案，最后完成了项目，虽然最后的成果没有尽如人意，但还是学到了不少东西，写篇文章记录一下。
+CNN简介
+这里的CNN并非美国的那个CNN电视台（Cable News Network），它全名为C..." />
+    <meta name="keywords" content="CNN,Python" />
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://dankin.github.io">
+        <img src="https://dankin.github.io/images/avatar.png?v=1594196307442" class="site-logo">
+        <h1 class="site-title">Dankin&#39;s Blog</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      时光泡烂了过往
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://dankin.github.io/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">CNN卷积神经网络</h2>
+            <div class="post-date">2020-07-08</div>
+            
+            <div class="post-content" v-pre>
+              <p>帮学长做一个卷积层的修改，历时一个月，折腾好多方案，最后完成了项目，虽然最后的成果没有尽如人意，但还是学到了不少东西，写篇文章记录一下。</p>
 <h2 id="cnn简介">CNN简介</h2>
 <p>这里的CNN并非美国的那个CNN电视台（Cable News Network），它全名为Convolutional Neural Network，即卷积神经网络，经常用于大型图像的处理。</p>
 <h2 id="cnn的各层">CNN的各层</h2>
@@ -62,16 +142,58 @@
 <p>一个CNN的实现流程包括正向传播和反向传播两部分，正向传播过程是图片通过卷积层，relu层，池化层，全连接层，loss层处理后得到一个loss值，反向传播是根据loss值反向推导各个层的偏差最后回到卷积层来调整卷积核的权重，反向传播实际上就是一个训练卷积核的过程。而正向传播也可以用已经训练好的卷积核来实现分类操作。</p>
 <h2 id="项目记录">项目记录</h2>
 <p>一开始修改思路是从padding的方式入手，same的padding方式中补0操作带来了一定精度损失，于是考虑使用对边缘单独训练的方式，将补的0替换为边缘。但代码实现太过困难，对边缘的操作无法方便的转换为矩阵乘法且loss值计算也遇到了障碍。于是通过取卷积核的权重的平均值的50倍，乘以图片边缘的值来替换原来的0，最终使用非经典网络完成了这一操作。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[a simple start]]></title>
-        <id>https://dankin.github.io/post/hello/</id>
-        <link href="https://dankin.github.io/post/hello/">
-        </link>
-        <updated>2020-07-07T07:33:56.000Z</updated>
-        <content type="html"><![CDATA[<p>比起写博客，更想作为一个记录自己的地方吧，有趣的事，想说的话，顺带上一些学习笔记，成就打卡，比起社交软件上的树洞，这样一个大大方方而又无人问津的地方更合我的胃口。<br>
-搭建这个blog用的是<a href="http://www.gridea.dev">Gridea</a>，图个方便，暂时偏向简洁风就先不安装什么插件了，用了自带的simple主题，比起花里胡哨，更重要的是写下的文字吧。</p>
-]]></content>
-    </entry>
-</feed>
+
+            </div>
+            
+              <div class="tag-container">
+                
+                  <a href="https://dankin.github.io/tag/Fp8yHrqrc/" class="tag">
+                    CNN
+                  </a>
+                
+                  <a href="https://dankin.github.io/tag/AzwU3UaNL/" class="tag">
+                    Python
+                  </a>
+                
+              </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://dankin.github.io/post/hello/">
+                  <h3 class="post-title">
+                    a simple start
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
+
+AOS.init();
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+
+
+  </body>
+</html>
