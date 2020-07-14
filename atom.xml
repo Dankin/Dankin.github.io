@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://dankin.github.io</id>
     <title>Dankin&apos;s Blog</title>
-    <updated>2020-07-08T08:18:38.688Z</updated>
+    <updated>2020-07-14T15:53:00.248Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://dankin.github.io"/>
     <link rel="self" href="https://dankin.github.io/atom.xml"/>
@@ -10,6 +10,45 @@
     <logo>https://dankin.github.io/images/avatar.png</logo>
     <icon>https://dankin.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Dankin&apos;s Blog</rights>
+    <entry>
+        <title type="html"><![CDATA[CTF入门之虚拟机安装配置]]></title>
+        <id>https://dankin.github.io/post/ctf-ru-men-zhi-xu-ni-ji-an-zhuang-pei-zhi/</id>
+        <link href="https://dankin.github.io/post/ctf-ru-men-zhi-xu-ni-ji-an-zhuang-pei-zhi/">
+        </link>
+        <updated>2020-07-14T10:37:01.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="介绍">介绍</h2>
+<p>因为学习CTF需要使用到多个不同的操作系统，而一台电脑安装多个操作系统时切换极为不便且没有必要，因此选择在一个主系统内安装虚拟机，方便切换，使用和练习。</p>
+<h2 id="相关软件和操作系统">相关软件和操作系统</h2>
+<p>一共安装了5个操作系统，包括三个Linux系统——<strong>kali</strong>，<strong>ubuntu</strong>和<strong>Metasploitable2</strong>，2个windows系统——<strong>windows server 2003</strong>和<strong>windows7</strong>，使用的虚拟机软件是Vmware15下面大概总结一下安装步骤。</p>
+<h2 id="安装步骤">安装步骤</h2>
+<ul>
+<li>Kali：在该<a href="https://www.kali.org/downloads/">网站</a>直接下载，最下面一排有个<br>
+<img src="https://dankin.github.io/post-images/1594740160862.png" alt="" loading="lazy">选择对应的，下载后可以直接双击vmx文件打开,默认用户名和密码均为kali</li>
+<li>Ubuntu： 在该<a href="https://ubuntu.com/#download">网站</a>下载桌面版，然后使用Vmware安装，放个<a href="https://zhuanlan.zhihu.com/p/38797088">链接</a>自查</li>
+<li>Metasploitable2： 用来做靶机，和Kali一样下载后打开vmx文件即可，这是<a href="https://sourceforge.net/projects/metasploitable/files/">链接</a>默认用户名和密码均为msfadmin</li>
+<li>windows server 2003：这个资源不太好找，放一个百度云的<a href="https://pan.baidu.com/share/init?surl=gfjvgaB">链接</a>,密码2l1d，选win2K3即可，剩下安装和装Ubuntu差不太多，不过这个版本比较特殊，把ip地址固定成了10.100开头的一个地址，进入适配器里将ipv4地址改为自动即可。</li>
+<li>win7：不想多介绍这个，丢个能直接打开的vmx的<a href="http://pan.baidu.com/s/1o8BOeQA">链接</a>i，密码5mv7</li>
+</ul>
+<h2 id="共享文件夹">共享文件夹</h2>
+<p>这个操作相对麻烦，先说windows的，两个系统的步骤统一，都是在虚拟机设置里将选项中的共享文件夹启用并添加本地文件夹，并勾选windows客户端中印射驱动器即可，如图<br>
+<img src="https://dankin.github.io/post-images/1594741355604.png" alt="" loading="lazy"><br>
+linux主要是kali和Ubuntu需要配置，除了勾选印设其他两个第一步和windows一样，第二步<strong>Ubuntu</strong>只要安装VmwareTool即可，见<a href="https://blog.csdn.net/leelitian3/article/details/104710096">教程链接</a>,而<strong>Kali</strong>相对麻烦一些，需要手动用apt安装VmwareTools并配置，见<a href="https://blog.csdn.net/jun2016425/article/details/102542082">链接</a></p>
+<h2 id="快照与克隆">快照与克隆</h2>
+<p>简单说快照就是创建了一个系统还原点，可以还原操作系统，和原系统不可分，而克隆就是复制了一个一样的镜像，操作懒得介绍了，用得到就查一下，哦快照最好建个初始的方便崩了还原。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[2020.7.14随笔]]></title>
+        <id>https://dankin.github.io/post/2020713-sui-bi/</id>
+        <link href="https://dankin.github.io/post/2020713-sui-bi/">
+        </link>
+        <updated>2020-07-13T09:11:05.000Z</updated>
+        <content type="html"><![CDATA[<p>前天结束了第一次组会，联系好了老师，算是拉开了读研的序幕。<br>
+后续要做的事情很多，帮师兄实现平台，学习CTF相关知识，巩固计算机网络基础，还有必学的PHP，每周还得搞定一篇论文，希望后面的日子越来越充实吧。<br>
+这边上班很清闲，甚至可以说清闲的有点过分，大多数时间在自己学东西（就是有人盯着挺拘束），基本没啥消费赚钱的欲望都低了不少，但是整天坐着着实有些难受，计划混到月底回家，专心呆空调房里学一阵子然后等9.1的开学。<br>
+好像没啥其他好说的，写学习笔记去了。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[CNN卷积神经网络]]></title>
         <id>https://dankin.github.io/post/cnn-juan-ji-ceng-xiu-gai/</id>
