@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://dankin.github.io</id>
     <title>Dankin&apos;s Blog</title>
-    <updated>2020-07-14T15:55:47.290Z</updated>
+    <updated>2020-07-18T07:55:59.110Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://dankin.github.io"/>
     <link rel="self" href="https://dankin.github.io/atom.xml"/>
@@ -32,9 +32,17 @@
 <h2 id="共享文件夹">共享文件夹</h2>
 <p>这个操作相对麻烦，先说windows的，两个系统的步骤统一，都是在虚拟机设置里将选项中的共享文件夹启用并添加本地文件夹，并勾选windows客户端中印射驱动器即可，如图<br>
 <img src="https://dankin.github.io/post-images/1594741355604.png" alt="" loading="lazy"><br>
-linux主要是kali和Ubuntu需要配置，除了勾选印设其他两个第一步和windows一样，第二步<strong>Ubuntu</strong>只要安装VmwareTool即可，见<a href="https://blog.csdn.net/leelitian3/article/details/104710096">教程链接</a>,而<strong>Kali</strong>相对麻烦一些，需要手动用apt安装VmwareTools并配置，见<a href="https://blog.csdn.net/jun2016425/article/details/102542082">链接</a></p>
+linux主要是kali和Ubuntu需要配置，除了勾选印设其他两个第一步和windows一样，第二步<strong>Ubuntu</strong>只要安装VmwareTool即可，见<a href="https://blog.csdn.net/leelitian3/article/details/104710096">教程链接</a>,而<strong>Kali</strong>相对麻烦一些，需要手动用apt安装VmwareTools并配置，见<a href="https://blog.csdn.net/Kevinhanser/article/details/79451108">链接</a>，同时开机自动挂载好像试了几次无效，所以每次重启需要手动挂载</p>
 <h2 id="快照与克隆">快照与克隆</h2>
 <p>简单说快照就是创建了一个系统还原点，可以还原操作系统，和原系统不可分，而克隆就是复制了一个一样的镜像，操作懒得介绍了，用得到就查一下，哦快照最好建个初始的方便崩了还原。</p>
+<h2 id="网络配置">网络配置</h2>
+<ul>
+<li>主要有以下3种网络配置模式：桥接模式 ，NAT网络地址转换，仅主机模式(host only)
+<ul>
+<li>桥接模式</li>
+</ul>
+</li>
+</ul>
 ]]></content>
     </entry>
     <entry>
